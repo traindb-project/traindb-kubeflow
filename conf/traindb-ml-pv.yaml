@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  labels:
+    name: traindb-ml-volume
+    podtype: pv
+    subsystem: ml
+    system: traindb
+  name: traindb-ml-volume
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 10Gi
+  hostPath:
+    path: /home/sungsoo/traindb/traindb-ml/models
+  storageClassName: manual

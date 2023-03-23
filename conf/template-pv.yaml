@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: template-pv
+  labels:
+    system : traindb
+    subsystem : ml
+    podtype : pv
+    name : template-pv
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "template-hostpath"
+

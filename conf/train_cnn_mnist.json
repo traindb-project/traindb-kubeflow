@@ -1,0 +1,25 @@
+{
+  "datasource":
+  {
+    "engine":"mysql",
+    "parameters":
+    {
+        "user":"root",
+        "port":3306,
+        "password":"Mimzo3i-mxt@9CpThpBj",
+        "host":"127.0.0.1",
+        "database":"instacart",
+        "table":"order_product",
+        "columnlist":["column1","column2"]
+    }
+  },
+  "hyperparams":
+  {
+    "batch-size":24,
+    "test-batch-size":12,
+    "epochs":1,
+    "lr":0.8,
+    "momentum":0.8,
+    "seed":1
+  }
+}

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: traindb-ml-claim
+  namespace: traindb-ml
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+  selector:
+    matchLabels:
+      name: traindb-ml-claim
+      podtype: pv
+      subsystem: ml
+      system: traindb
+  storageClassName: manual

@@ -1,0 +1,16 @@
+apiVersion: kubeflow.org/v1beta1
+kind: Profile
+metadata:
+  name: traindb   # replace with the name of profile you want, this will be user's namespace name
+spec:
+  owner:
+    kind: User
+    name: traindb@traindb.com   # replace with the email of the user
+  resourceQuotaSpec:
+   hard:
+     cpu: "6"
+     memory: "16Gi"
+     requests.nvidia.com/gpu: "1"
+     persistentvolumeclaims: "10"
+     requests.storage: "100Gi"
+      
